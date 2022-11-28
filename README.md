@@ -28,3 +28,6 @@ Because embedded systems are often difficult to secure, all connections to the i
 - Node JS
 - PostgreSQL? (DB decision pending)
 - Docker
+
+## Reference Documentation
+https://www.electronjs.org/docs/latest/tutorial/window-customization
