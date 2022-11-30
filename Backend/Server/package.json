@@ -1,0 +1,11 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "POS Backend Server",
+  "main": "index.js",
+  "author": "Kevin Harvey",
+  "license": "MIT",
+  "dependencies": {
+    "pg": "^8.8.0"
+  }
+}
