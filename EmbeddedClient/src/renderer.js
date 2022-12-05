@@ -26,8 +26,9 @@
  * ```
  */
 
+// Import styles
 import './index.css';
+import './styles/Authentication.css'
 
-console.log('👋 This message is being logged by "renderer.js", included via webpack');
-// Add this to the end of the existing file
-import './app.jsx';
+// Import main component
+import './App.jsx';
