@@ -12,12 +12,15 @@ const createWindow = () => {
     width: 1280,
     height: 720,
     frame: true,
+    // fullscreen: true,
     titleBarStyle: false,
     webPreferences: {
       preload: MAIN_WINDOW_PRELOAD_WEBPACK_ENTRY,
     },
   });
 
+  // Set background color before app finishes loading
+  mainWindow.setBackgroundColor("#2f2f2f");
   // and load the index.html of the app.
   mainWindow.loadURL(MAIN_WINDOW_WEBPACK_ENTRY);
 };
