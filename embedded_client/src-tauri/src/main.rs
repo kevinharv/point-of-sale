@@ -9,9 +9,19 @@ fn greet(name: &str) -> String {
     format!("Hello, {}! You've been greeted from Rust!", name)
 }
 
+#[tauri::command]
+fn handle_login(username: &str) -> bool {
+    if username == "test" {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
 fn main() {
     tauri::Builder::default()
-        .invoke_handler(tauri::generate_handler![greet])
+        .invoke_handler(tauri::generate_handler![greet, handle_login])
         .run(tauri::generate_context!())
         .expect("error while running tauri application");
 }
