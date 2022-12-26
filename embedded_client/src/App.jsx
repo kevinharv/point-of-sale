@@ -1,8 +1,7 @@
 import { useState } from "react";
-import reactLogo from "./assets/react.svg";
 import { invoke } from "@tauri-apps/api/tauri";
 import "./App.css";
-
+import config from "./config/tenant.json";
 import Login from "./components/Login";
 
 function App() {
@@ -16,7 +15,11 @@ function App() {
 
   return (
     <div className="container">
-      <div>
+      <div className="logoTitle">
+        <h1>{config.name}</h1>
+      </div>
+
+      <div className="authSection">
         <Login />
       </div>
     </div>
