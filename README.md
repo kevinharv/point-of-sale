@@ -1,7 +1,7 @@
 # Point of Sale Application
 
 ## Components
-- Electron Embedded Client
+- Tauri Embedded Client
 - Web Client
 - Backend Server
 
@@ -23,11 +23,38 @@ Because embedded systems are often difficult to secure, all connections to the i
 
 ## Technology Stack
 - React JS
-- Electron JS
+- Tauri
 - Express JS
 - Node JS
 - PostgreSQL? (DB decision pending)
 - Docker
 
-## Reference Documentation
-https://www.electronjs.org/docs/latest/tutorial/window-customization
+# Page Map
+## Embedded Client
+### Home Pages
+- Authentication
+- Homescreen
+- Configuration
+    - Manager Screen
+        - Employee Management
+        - Order Management
+        - Operations Management
+        - Fiscal Management
+    - Sales Manager
+    - Profile Manager
+    - Device Management (elevation required for some ops)
+- Open Tickets
+- Pending Orders
+- Start Bar Tab
+- Start Table Tab
+
+### Order Pages
+- Navigation
+- Seat Selection
+- ? Guest Information
+- Drinks
+- Alcohol
+    - Beer
+    - Wine
+    - Spirits
+- Food
