@@ -58,3 +58,28 @@ Because embedded systems are often difficult to secure, all connections to the i
     - Wine
     - Spirits
 - Food
+
+
+# User Model
+## Roles
+- Administrator
+    - Read/Write to all aspects of tenant
+- Site Manager
+    - R/W most aspects of tenant
+- General Manager
+    - R/W most aspects of given location
+- Sales Manager
+    - Manage sales at given location
+- Employment Manager
+    - Manage employees at given location
+- Operational Manager
+    - Manage systems at given location
+- Sales
+    - Alcohol
+    - Other restricted items?
+- Fullfillment
+    - RO for some sales data
+- Timeclock
+    - Timeclock only
+- Disabled
+    - No access

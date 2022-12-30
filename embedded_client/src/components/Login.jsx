@@ -1,23 +1,21 @@
 import { useState } from "react";
-import { invoke } from "@tauri-apps/api";
-import tenant from '../config/tenant.json'
 import { useNavigate } from "react-router-dom";
+import { invoke } from "@tauri-apps/api";
 
 export default function Login() {
     const navigate = useNavigate();
     const [PIN, setPIN] = useState("");
 
     function handleLogin() {
-        alert(PIN);
-        setPIN("");
-
         /*
-            - Send PIN to server
-            - Get back user info, or invalid
-                - Error on invalid login
-            - Store user information returned by server
-            - Navigate to main menu
+        - Send PIN to server
+        - Get back user info, or invalid
+        - Error on invalid login
+        - Store user information returned by server
+        - Navigate to main menu
         */
+       setPIN("");
+       localStorage.setItem("username", "Joseph")
        navigate('home');
     }
 
