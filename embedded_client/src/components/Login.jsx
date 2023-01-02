@@ -1,10 +1,12 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { invoke } from "@tauri-apps/api";
+import Cookies from 'universal-cookie';
 
 export default function Login() {
     const navigate = useNavigate();
     const [PIN, setPIN] = useState("");
+    const cookies = new Cookies();
 
     function handleLogin() {
         /*
@@ -15,7 +17,10 @@ export default function Login() {
         - Navigate to main menu
         */
        setPIN("");
-       localStorage.setItem("username", "Joseph")
+
+       cookies.set("name", "Byron", { path: '/'})
+       cookies.set("roles", ["manager", "sales"], { path: '/' })
+
        navigate('home');
     }
 
