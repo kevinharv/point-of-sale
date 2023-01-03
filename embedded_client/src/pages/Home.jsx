@@ -2,8 +2,10 @@ import { useState } from "react";
 import Login from '../components/Login';
 import '../styles/Home.css';
 import Cookies from 'universal-cookie';
+import { useNavigate, useNavigationType } from "react-router-dom";
 
 export default function Home() {
+    const navigate = useNavigate();
 
     const cookies = new Cookies();
     let roles = cookies.get("roles");
@@ -30,7 +32,7 @@ export default function Home() {
 
 
             <div className="actionSelect">
-                {btnConfig.profile && <button>Profile</button>}
+                {btnConfig.profile && <button onClick={() => navigate('/profile')}>Profile</button>}
                 {btnConfig.manager && <button>Manager Actions</button>}
                 {btnConfig.activeSales && <button>Sales</button>}
                 {btnConfig.activeSales && <button>Open Tabs</button>}

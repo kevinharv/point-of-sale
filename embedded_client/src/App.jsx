@@ -26,8 +26,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Outlet />}>
             <Route index element={<Login />} />
-            <Route path="home" element={<Home />} />
-            <Route path="profile" element={<ProfileManager />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<ProfileManager />} />
             <Route path="*" element={<ErrorPage />} />
           </Route>
         </Routes>

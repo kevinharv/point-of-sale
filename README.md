@@ -29,6 +29,11 @@ Because embedded systems are often difficult to secure, all connections to the i
 - PostgreSQL? (DB decision pending)
 - Docker
 
+## Management Functionality
+- Audit Logins/Actions by User/Timestamp
+- "Trace" of users/actions/orders etc.
+
+
 # Page Map
 ## Embedded Client
 ### Home Pages

@@ -18,10 +18,10 @@ export default function Login() {
         */
        setPIN("");
 
-       cookies.set("name", "Byron", { path: '/'})
-       cookies.set("roles", ["manager", "sales"], { path: '/' })
+       cookies.set("name", "Byron", [{ path: '/' }, { SameSite: 'None' }])
+       cookies.set("roles", ["manager", "sales"], [{ path: '/' }, { SameSite: 'None'}])
 
-       navigate('home');
+       navigate('/home');
     }
 
     return (
