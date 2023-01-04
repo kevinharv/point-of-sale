@@ -1,7 +1,7 @@
 # Point of Sale Application
 
 ## Components
-- Electron Embedded Client
+- Tauri Embedded Client
 - Web Client
 - Backend Server
 
@@ -23,11 +23,75 @@ Because embedded systems are often difficult to secure, all connections to the i
 
 ## Technology Stack
 - React JS
-- Electron JS
+- Tauri
 - Express JS
 - Node JS
 - PostgreSQL? (DB decision pending)
 - Docker
 
-## Reference Documentation
-https://www.electronjs.org/docs/latest/tutorial/window-customization
+## Management Functionality
+- Audit Logins/Actions by User/Timestamp
+- "Trace" of users/actions/orders etc.
+
+
+# Page Map
+## Embedded Client
+### Home Pages
+- Authentication
+- Homescreen
+- Configuration
+    - Manager Screen
+        - Employee Management
+        - Order Management
+        - Operations Management
+        - Fiscal Management
+    - Sales Manager
+    - Profile Manager
+    - Device Management (elevation required for some ops)
+- Open Tickets
+- Pending Orders
+- Start Bar Tab
+- Start Table Tab
+
+### Order Pages
+- Navigation
+- Seat Selection
+- ? Guest Information
+- Drinks
+- Alcohol
+    - Beer
+    - Wine
+    - Spirits
+- Food
+
+
+# User Model
+## Roles
+- Administrator
+    - Read/Write to all aspects of tenant
+- Site Manager
+    - R/W most aspects of tenant
+- General Manager
+    - R/W most aspects of given location
+- Sales Manager
+    - Manage sales at given location
+- Employment Manager
+    - Manage employees at given location
+- Operational Manager
+    - Manage systems at given location
+- Sales
+    - Alcohol
+    - Other restricted items?
+- Fullfillment
+    - RO for some sales data
+- Timeclock
+    - Timeclock only
+- Disabled
+    - No access
+
+## Permissions
+Permissions are inherited from roles, but can also be manually enabled and disabled on a per user basis. The default permissions granted by each role cannot be changed at this time. In the future, this may be a feature implemented on a per site, or per tenant basis. Permissions are divided into categories according to the part of the application they are a part of.
+
+### Administrative
+- Tenant Settings
+- Site Management
