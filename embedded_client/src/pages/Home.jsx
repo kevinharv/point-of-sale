@@ -18,6 +18,7 @@ export default function Home() {
         "newSales": true,
         "profile": true,
         "alcohol": true,
+        "deviceConfig": true,
     }
 
     return (
@@ -34,10 +35,13 @@ export default function Home() {
             <div className="actionSelect">
                 {btnConfig.profile && <button onClick={() => navigate('/profile')}>Profile</button>}
                 {btnConfig.manager && <button>Manager Actions</button>}
-                {btnConfig.activeSales && <button>Sales</button>}
-                {btnConfig.activeSales && <button>Open Tabs</button>}
-                {btnConfig.newSales && <button>Start Order</button>}
-                {btnConfig.alcohol && <button>Start Bar Tab</button>}
+                {btnConfig.deviceConfig && <button>Device Configuration</button>}
+
+                {/* Main Actions */}
+                {btnConfig.activeSales && <button onClick={() => navigate('/sales/all-tabs')}>All Tabs</button>}
+                {btnConfig.activeSales && <button onClick={() => navigate('/sales/open-tabs')}>Open Tabs</button>}
+                {btnConfig.newSales && <button onClick={() => navigate('/sales/table-tab')}>Start Order</button>}
+                {btnConfig.alcohol && <button onClick={() => navigate('/sales/bar-tab')}>Start Bar Tab</button>}
             </div>
         </>
     );

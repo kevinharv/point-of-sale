@@ -88,3 +88,10 @@ Because embedded systems are often difficult to secure, all connections to the i
     - Timeclock only
 - Disabled
     - No access
+
+## Permissions
+Permissions are inherited from roles, but can also be manually enabled and disabled on a per user basis. The default permissions granted by each role cannot be changed at this time. In the future, this may be a feature implemented on a per site, or per tenant basis. Permissions are divided into categories according to the part of the application they are a part of.
+
+### Administrative
+- Tenant Settings
+- Site Management

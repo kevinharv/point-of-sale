@@ -16,11 +16,23 @@ export default function ProfileManager() {
         "birthdate": "2002/07/03",
 
         "roles": ["manager", "sales"],
-        "permissions": [],
+        "permissions": ["change_PIN"],
         "previousLogin": "Friday, July 23, 2022 from FATPOS007",
         "clockStatus": "Clocked In - 17:34",
         "email": "kevin@pos.com",
         "address": "123 Admin St, Austin, TX, 77123"
+    }
+
+    function handlePersonalInfoChange() {
+        // Popup form and POST to server
+    }
+
+    function handleWorkInfoChange() {
+        // Popup form and POST to server
+    }
+
+    function handlePINChange() {
+        // Popup form and POST to server
     }
 
     return(
@@ -55,6 +67,10 @@ export default function ProfileManager() {
             <h2>User Roles:</h2>
             <ul className="list-disc ml-5">
                 {user.roles.map(role => <li key={role}>{role}</li>)}
+            </ul>
+            <h2>User Permissions:</h2>
+            <ul className="list-disc ml-5">
+                {user.permissions.map(permission => <li key={permission}>{permission}</li>)}
             </ul>
         </div>
 
