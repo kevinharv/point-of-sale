@@ -5,7 +5,7 @@
 - Web Client
 - Backend Server
 
-### Electron Embedded Client
+### Tauri Embedded Client
 The embedded client is responsible for most actions pertaining to the POS system. This is where orders will be placed, employees will manage their time, etc. It is designed with responsiveness and performance in mind. It is designed to run on a portable tablet-like single-purpose system, or a desktop single-purpose system. Systems must be equipped with supported payment processing hardware.
 
 Additionally, the embedded client will be responsible for operational management tasks. Manager overrides, order changes, etc. will be performed from the embedded client.
