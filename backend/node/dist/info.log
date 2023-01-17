@@ -1,0 +1,92 @@
+{"level":"info","message":"Application started on KEVWKSFED"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673920904314"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673921339706"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673921542890"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922454792"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922520323"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922540868"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922638073"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922692846"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673922814883"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923075624"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923099221"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923150744"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923168810"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923263461"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673923289679"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924169807"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924353975"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"User Authenticated"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924407374"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924473641"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"System Info Requested"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924487857"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on KEVWKSFED at 1673924534676"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"dns_servers":["127.0.0.53"],"postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":{"lo":[{"address":"127.0.0.1","cidr":"127.0.0.1/8","family":"IPv4","internal":true,"mac":"00:00:00:00:00:00","netmask":"255.0.0.0"},{"address":"::1","cidr":"::1/128","family":"IPv6","internal":true,"mac":"00:00:00:00:00:00","netmask":"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff","scopeid":0}],"wlp6s0":[{"address":"10.122.201.61","cidr":"10.122.201.61/17","family":"IPv4","internal":false,"mac":"70:cf:49:bc:7e:a6","netmask":"255.255.128.0"},{"address":"fe80::abb9:8848:3ca8:cef8","cidr":"fe80::abb9:8848:3ca8:cef8/64","family":"IPv6","internal":false,"mac":"70:cf:49:bc:7e:a6","netmask":"ffff:ffff:ffff:ffff::","scopeid":3}]},"server_arch":"x64","server_availableMem":5926948864,"server_cpu":[{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1550,"times":{"idle":37926690,"irq":86750,"nice":1120,"sys":493910,"user":1417640}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":38023990,"irq":84530,"nice":2750,"sys":508070,"user":1383400}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1550,"times":{"idle":38031420,"irq":85750,"nice":1330,"sys":504770,"user":1395710}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":37868130,"irq":280540,"nice":6280,"sys":524570,"user":1323890}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1536,"times":{"idle":37974860,"irq":113870,"nice":1630,"sys":586440,"user":1298410}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1548,"times":{"idle":38056400,"irq":105750,"nice":1680,"sys":562460,"user":1264810}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1539,"times":{"idle":37997220,"irq":90440,"nice":680,"sys":513130,"user":1420600}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":38027720,"irq":92260,"nice":870,"sys":500640,"user":1385700}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":2777,"times":{"idle":38046730,"irq":85000,"nice":1730,"sys":495400,"user":1395370}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":37975610,"irq":99920,"nice":2290,"sys":549150,"user":1377390}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":37982310,"irq":107200,"nice":1220,"sys":571990,"user":1331380}},{"model":"AMD Ryzen 5 2600 Six-Core Processor","speed":1549,"times":{"idle":38147750,"irq":91630,"nice":1550,"sys":514640,"user":1255480}}],"server_hostname":"KEVWKSFED","server_memory":16672641024,"server_os":"linux","server_os_release":"6.1.5-200.fc37.x86_64","server_uptime":40211.18}}
+{"level":"info","message":"Application started on KEVWKSFED at 1673925026926"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"dns_servers":"[\"127.0.0.53\"]","postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":"{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1/8\"},{\"address\":\"::1\",\"netmask\":\"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\"family\":\"IPv6\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"::1/128\",\"scopeid\":0}],\"wlp6s0\":[{\"address\":\"10.122.201.61\",\"netmask\":\"255.255.128.0\",\"family\":\"IPv4\",\"mac\":\"70:cf:49:bc:7e:a6\",\"internal\":false,\"cidr\":\"10.122.201.61/17\"},{\"address\":\"fe80::abb9:8848:3ca8:cef8\",\"netmask\":\"ffff:ffff:ffff:ffff::\",\"family\":\"IPv6\",\"mac\":\"70:cf:49:bc:7e:a6\",\"internal\":false,\"cidr\":\"fe80::abb9:8848:3ca8:cef8/64\",\"scopeid\":3}]}","server_arch":"x64","server_availableMem":6017441792,"server_cpu":"[{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1457810,\"nice\":1120,\"sys\":508610,\"idle\":38343750,\"irq\":88900}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1422040,\"nice\":2750,\"sys\":522590,\"idle\":38445930,\"irq\":86320}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1431440,\"nice\":1330,\"sys\":518800,\"idle\":38457240,\"irq\":87570}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3898,\"times\":{\"user\":1357230,\"nice\":6280,\"sys\":538410,\"idle\":38285520,\"irq\":291640}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1559,\"times\":{\"user\":1332400,\"nice\":1630,\"sys\":603860,\"idle\":38394490,\"irq\":117480}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3899,\"times\":{\"user\":1297070,\"nice\":1680,\"sys\":576160,\"idle\":38483180,\"irq\":108440}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1460580,\"nice\":680,\"sys\":527340,\"idle\":38418570,\"irq\":92310}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1426850,\"nice\":870,\"sys\":515970,\"idle\":38445980,\"irq\":94440}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1549,\"times\":{\"user\":1431640,\"nice\":1730,\"sys\":510380,\"idle\":38470710,\"irq\":86970}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3890,\"times\":{\"user\":1412090,\"nice\":2290,\"sys\":564950,\"idle\":38397830,\"irq\":102850}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1560,\"times\":{\"user\":1366160,\"nice\":1220,\"sys\":589130,\"idle\":38401060,\"irq\":110790}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3899,\"times\":{\"user\":1287680,\"nice\":1550,\"sys\":528470,\"idle\":38574460,\"irq\":94260}}]","server_hostname":"KEVWKSFED","server_memory":16672641024,"server_os":"linux","server_os_release":"6.1.5-200.fc37.x86_64","server_uptime":40691.68}}
+{"level":"info","message":"Application started on KEVWKSFED at 1673925058825"}
+{"level":"info","message":"Database Connection Established"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"dns_servers":"[\"127.0.0.53\"]","postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":"{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1/8\"},{\"address\":\"::1\",\"netmask\":\"ffff:ffff:ffff:ffff:ffff:ffff:ffff:ffff\",\"family\":\"IPv6\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"::1/128\",\"scopeid\":0}],\"wlp6s0\":[{\"address\":\"10.122.201.61\",\"netmask\":\"255.255.128.0\",\"family\":\"IPv4\",\"mac\":\"70:cf:49:bc:7e:a6\",\"internal\":false,\"cidr\":\"10.122.201.61/17\"},{\"address\":\"fe80::abb9:8848:3ca8:cef8\",\"netmask\":\"ffff:ffff:ffff:ffff::\",\"family\":\"IPv6\",\"mac\":\"70:cf:49:bc:7e:a6\",\"internal\":false,\"cidr\":\"fe80::abb9:8848:3ca8:cef8/64\",\"scopeid\":3}]}","server_arch":"x64","server_availableMem":6183923712,"server_cpu":"[{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1272,\"times\":{\"user\":1461890,\"nice\":1120,\"sys\":509470,\"idle\":38381570,\"irq\":89040}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":2799,\"times\":{\"user\":1425520,\"nice\":2750,\"sys\":523600,\"idle\":38484520,\"irq\":86490}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1272,\"times\":{\"user\":1435600,\"nice\":1330,\"sys\":519760,\"idle\":38495380,\"irq\":87710}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1377,\"times\":{\"user\":1361070,\"nice\":6280,\"sys\":539670,\"idle\":38322970,\"irq\":292300}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1377,\"times\":{\"user\":1336050,\"nice\":1630,\"sys\":605640,\"idle\":38431870,\"irq\":117790}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1377,\"times\":{\"user\":1301600,\"nice\":1680,\"sys\":577660,\"idle\":38520190,\"irq\":108680}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1272,\"times\":{\"user\":1465300,\"nice\":680,\"sys\":528320,\"idle\":38456080,\"irq\":92480}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":2795,\"times\":{\"user\":1430060,\"nice\":870,\"sys\":517100,\"idle\":38484720,\"irq\":94660}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1272,\"times\":{\"user\":1436760,\"nice\":1730,\"sys\":511370,\"idle\":38507860,\"irq\":87120}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1377,\"times\":{\"user\":1416350,\"nice\":2290,\"sys\":566400,\"idle\":38435160,\"irq\":103110}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1377,\"times\":{\"user\":1371150,\"nice\":1220,\"sys\":590630,\"idle\":38437610,\"irq\":111070}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":1374,\"times\":{\"user\":1291860,\"nice\":1550,\"sys\":529690,\"idle\":38612100,\"irq\":94450}}]","server_hostname":"KEVWKSFED","server_memory":16672641024,"server_os":"linux","server_os_release":"6.1.5-200.fc37.x86_64","server_uptime":40735.31}}
