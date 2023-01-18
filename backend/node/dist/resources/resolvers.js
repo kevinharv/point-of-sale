@@ -51,7 +51,7 @@ async function getSysInfo() {
         server_os_release: os.release(),
         server_cpu: JSON.stringify(os.cpus()),
         server_memory: os.totalmem(),
-        server_availableMem: os.freemem(),
+        server_availableMem: os.freemem() / 1048576,
         server_NICs: JSON.stringify(os.networkInterfaces()),
         dns_servers: JSON.stringify(dns.getServers()),
         postgres_version: "",
