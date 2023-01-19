@@ -7,6 +7,8 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
+    "postup": "cd ../postgres && docker compose up -d",
+    "postdown": "cd ../postgres && docker compose down",
     "compile": "tsc",
     "start": "yarn run compile && node ./dist/index.js"
   },
