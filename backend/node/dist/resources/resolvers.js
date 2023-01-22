@@ -1,5 +1,10 @@
 /*
-
+    TITLE: POS Backend Server GraphQL Resolvers
+    AUTHOR: Kevin Harvey
+    DATE: 20220118
+    OVERVIEW: The GraphQL Resolvers are responsible for finding and returning the appropriate information for each query, mutation, or subscription.
+    Most actions in this file are calls to other functions or APIs responsible for fulfilling the actual request. This is remove excess code from
+    this file and ensure separation of concerns.
 */
 import { logger, pgclient } from '../index.js';
 import dns from 'dns';
@@ -50,7 +55,7 @@ async function getSysInfo() {
         server_os: os.platform(),
         server_os_release: os.release(),
         server_cpu: JSON.stringify(os.cpus()),
-        server_memory: os.totalmem(),
+        server_memory: os.totalmem() / 1048576,
         server_availableMem: os.freemem() / 1048576,
         server_NICs: JSON.stringify(os.networkInterfaces()),
         dns_servers: JSON.stringify(dns.getServers()),

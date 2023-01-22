@@ -10,7 +10,7 @@
     "postup": "cd ../postgres && docker compose up -d",
     "postdown": "cd ../postgres && docker compose down",
     "compile": "tsc",
-    "start": "yarn run compile && node ./dist/index.js"
+    "start": "yarn run compile && node --experimental-specifier-resolution=node ./dist/index.js"
   },
   "dependencies": {
     "@apollo/server": "^4.3.0",

@@ -11,6 +11,7 @@ import os from 'os';
 import pg from 'pg';
 import typeDefs from './resources/types.js';
 import resolvers from './resources/resolvers.js';
+import * as init from './db/init.js';
 // ------------ INITIATE LOGGING SERVICES --------------------
 export const logger = winston.createLogger({
     level: 'debug',
@@ -26,7 +27,8 @@ export const pgclient = new pg.Client({
     host: 'localhost',
     port: 5432,
     user: 'postgres',
-    password: 'postgres'
+    password: 'postgres',
+    database: 'pos'
 });
 // Connect to the Database
 pgclient.connect((err) => {
@@ -37,6 +39,10 @@ pgclient.connect((err) => {
         logger.info('Database Connection Established');
     }
 });
+// initDB();
+// insertDevData();
+init.initDB();
+init.insertDevData();
 const app = express();
 // Creation of HTTP server allows drain on shutdown
 const httpServer = http.createServer(app);
