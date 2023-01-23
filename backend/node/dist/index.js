@@ -11,7 +11,7 @@ import os from 'os';
 import pg from 'pg';
 import typeDefs from './resources/types.js';
 import resolvers from './resources/resolvers.js';
-import * as init from './db/init.js';
+import { initDB, insertDevData, validateDB } from './db/init.js';
 // ------------ INITIATE LOGGING SERVICES --------------------
 export const logger = winston.createLogger({
     level: 'debug',
@@ -39,10 +39,10 @@ pgclient.connect((err) => {
         logger.info('Database Connection Established');
     }
 });
-// initDB();
-// insertDevData();
-init.initDB();
-init.insertDevData();
+await initDB();
+await insertDevData();
+await validateDB();
+// Create web server
 const app = express();
 // Creation of HTTP server allows drain on shutdown
 const httpServer = http.createServer(app);

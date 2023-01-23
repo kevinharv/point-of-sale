@@ -14,7 +14,7 @@ import pg from 'pg';
 import typeDefs from './resources/types.js';
 import resolvers from './resources/resolvers.js';
 
-import { initDB, insertDevData } from './db/init.js';
+import { initDB, insertDevData, validateDB } from './db/init.js';
 
 
 // ------------ INITIATE LOGGING SERVICES --------------------
@@ -50,8 +50,9 @@ pgclient.connect((err) => {
 });
 
 
-initDB();
-insertDevData();
+await initDB();
+await insertDevData();
+await validateDB();
 
 
 // Create web server

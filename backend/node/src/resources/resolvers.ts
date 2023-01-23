@@ -31,9 +31,11 @@ const resolvers = {
     },
 
     Mutation: {
-        
         updateUser: (args: any) => {
             return String(args.userID);
+        },
+        addUser: (source, args) => {
+            return String(addUser(args.user));
         }
     },
 }
@@ -42,36 +44,29 @@ export default resolvers
 
 /* --------------- FUNCTIONAL HANDLERS ------------------- */
 
-function handlePINAuth(PIN: number) {
-    let statusCode: String;
-    // Query PIN against DB
-    // Get user
 
-    if (PIN == 1234) {
-        statusCode = "200 OK"
-        logger.info('User Authenticated');
-    }
-    else {
-        statusCode = "403 Forbidden"
+async function addUser(args): Promise<String> {
+    const query = {
+        name: 'Insert New User',
+        text: 'INSERT INTO users(username, password, displayname, fname, mname, lname, email) VALUES($1, $2, $3, $4, $5, $6, $7)',
+        values: [args.username, args.userPIN, args.displayName, args.firstName, args.middleName, args.lastName, args.email]
     }
 
-    return statusCode
+    const res = await pgclient.query(query);
+    return JSON.stringify(res.rows);
+}
+
+async function handlePINAuth(PIN: number) {
+    const query = {
+        name: 'Validate Passowrd',
+        text: 'SELECT username FROM users WHERE password=$1',
+        values: [PIN]
+    }
+    let res = await pgclient.query(query);
+    return res.rows[0].username;
 }
 
 async function getSysInfo() {
-    type System = {
-        server_hostname: String
-        server_uptime: number
-        server_arch: String
-        server_os: String
-        server_os_release: String
-        server_cpu: String
-        server_memory: number
-        server_availableMem: number
-        server_NICs: String
-        dns_servers: String
-        postgres_version: String
-    }
 
     let systemInfo: System = {
         server_hostname: os.hostname(),

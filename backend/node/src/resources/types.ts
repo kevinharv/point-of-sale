@@ -1,6 +1,24 @@
 const typeDefs = `#graphql
     type User {
-        userID: Int!
+        userID: Int
+        username: String!
+        displayName: String!
+        firstName: String!
+        middleName: String
+        lastName: String!
+        birthdate: String
+        address: String
+        email: String!
+        clockStatus: Boolean
+        lastClockIn: String
+        lastClockOut: String
+        roles: [String!]
+        permissions: [String!]
+    }
+
+    input UserIn {
+        userID: Int
+        userPIN: Int!
         username: String!
         displayName: String!
         firstName: String!
@@ -39,6 +57,7 @@ const typeDefs = `#graphql
 
     type Mutation {
         updateUser(userID: Int!): String
+        addUser(user: UserIn): String
     }
 `;
 
