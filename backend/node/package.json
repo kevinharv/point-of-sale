@@ -7,10 +7,9 @@
   "license": "MIT",
   "type": "module",
   "scripts": {
-    "postup": "cd ../postgres && docker compose up -d",
-    "postdown": "cd ../postgres && docker compose down",
     "compile": "tsc",
-    "start": "yarn run compile && nodemon ./dist/index.js"
+    "dev": "yarn run compile && nodemon ./dist/index.js",
+    "start": "yarn run compile && node ./dist/index.js"
   },
   "dependencies": {
     "@apollo/server": "^4.3.0",
