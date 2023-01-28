@@ -1,9 +1,8 @@
-import { pgclient, logger } from "..";
+import { pgclient, logger } from "../index.js";
 import schema from './schema.json' assert { type: "json" };
-import devData from './devData.json' assert { type: "json" };
 import { faker } from '@faker-js/faker';
 
-export async function initDB(): Promise<void> {
+export async function initDB() {
     const query: QueryConfig = {
         name: 'Create Users Table',
         text: `CREATE TABLE IF NOT EXISTS users (
@@ -29,13 +28,17 @@ export async function initDB(): Promise<void> {
     logger.info("Users Table Created");
 }
 
-export async function insertDevData(): Promise<void> {
-    // Drop all existing users
-    let query: QueryConfig = {
-        name: 'Drop All Users',
-        text: 'DELETE FROM users',
-    };
-    await pgclient.query(query);
+export async function insertDevData() {
+    // // Drop all existing users
+    // let query: QueryConfig = {
+    //     name: 'Drop All Users',
+    //     text: 'DELETE FROM users',
+    // };
+    // await pgclient.query(query);
+
+    if (userDataPresent()) {
+        return;
+    }
 
     let user: User;
     let fname: String, lname: String, clockIn: Date, clockOut: Date, birthdate: Date;
@@ -58,10 +61,10 @@ export async function insertDevData(): Promise<void> {
             address: faker.address.streetAddress(),
             email: faker.internet.email(),
             clockStatus: false,
-            lastClockIn: String(clockIn.toISOString()).substring(0,10) + ' ' + String(clockIn.toISOString()).substring(11,19),
+            lastClockIn: String(clockIn.toISOString()).substring(0, 10) + ' ' + String(clockIn.toISOString()).substring(11, 19),
             lastClockOut: String(clockOut.toISOString()).substring(0, 10) + ' ' + String(clockOut.toISOString()).substring(11, 19),
-            roles: {"roles": ['waitstaff']},
-            permissions: {"permissions": ['timeclock', 'foodSales', 'drinkSales']}
+            roles: { "roles": ['waitstaff'] },
+            permissions: { "permissions": ['timeclock', 'foodSales', 'drinkSales'] }
         }
 
         // Insert user into DB
@@ -77,7 +80,6 @@ export async function insertDevData(): Promise<void> {
     logger.info("Development Data Inserted into DB");
 }
 
-
 export async function validateDB(): Promise<Boolean> {
     let valid = true;
     const rows = schema.dbtables;
@@ -91,6 +93,23 @@ export async function validateDB(): Promise<Boolean> {
         if (res.rows[i].table_name != rows[i]) {
             valid = false;
         }
+    }
+
+    return valid;
+}
+
+
+async function userDataPresent() {
+    let valid = true;
+    const rows = schema.dbtables;
+    const query: QueryConfig = {
+        name: 'Check for User Data',
+        text: "SELECT * FROM users"
+    }
+
+    let res = await pgclient.query(query);
+    if (res.rowCount < 5) {
+        valid = false;
     }
 
     return valid;

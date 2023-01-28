@@ -9,8 +9,8 @@ import bodyParser from 'body-parser';
 import winston from 'winston';
 import os from 'os';
 import pg from 'pg';
-import typeDefs from './resources/types.js';
-import resolvers from './resources/resolvers.js';
+import typeDefs from './graphql/types.js';
+import resolvers from './graphql/resolvers.js';
 import { initDB, insertDevData, validateDB } from './db/init.js';
 // ------------ INITIATE LOGGING SERVICES --------------------
 export const logger = winston.createLogger({
@@ -24,7 +24,7 @@ logger.info(`Application started on ${os.hostname()} at ${Date.now()}`);
 // -------------- CONNECT TO DB -----------------------------
 // Create PostgreSQL Database Client
 export const pgclient = new pg.Client({
-    host: 'localhost',
+    host: 'postgres',
     port: 5432,
     user: 'postgres',
     password: 'postgres',
@@ -36,12 +36,15 @@ pgclient.connect((err) => {
         logger.error('Database Connection Error: ', err.stack);
     }
     else {
-        logger.info('Database Connection Established');
+        logger.info('Database Connection Established!');
     }
 });
 await initDB();
 await insertDevData();
-await validateDB();
+let res = await validateDB();
+if (!res) {
+    logger.warn("Database Check Failed");
+}
 // Create web server
 const app = express();
 // Creation of HTTP server allows drain on shutdown

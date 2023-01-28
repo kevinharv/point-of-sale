@@ -1,0 +1,33 @@
+---
+version: "3"
+services:
+  node:
+    build: ../node
+    container_name: node-server
+    restart: unless-stopped
+    ports:
+      - 4000:4000
+    volumes:
+      - ../node:/app
+      - /app/node_modules
+    environment:
+      - NODE_ENV=development
+    depends_on:
+      - postgres
+    command: yarn start
+
+  postgres:
+      image: postgres:12.3-alpine
+      container_name: postgres
+      restart: always
+      environment:
+        POSTGRES_DB: pos
+        POSTGRES_USER: postgres
+        POSTGRES_PASSWORD: postgres
+      ports:
+        - 5432:5432
+      volumes:
+        - postgres:/var/lib/postgresql/data
+
+volumes:
+  postgres:

@@ -1,40 +1,12 @@
-import { pgclient, logger } from "../index.js";
-import schema from './schema.json' assert { type: "json" };
+import { pgclient, logger } from "..";
 import { faker } from '@faker-js/faker';
-export async function initDB() {
-    const query = {
-        name: 'Create Users Table',
-        text: `CREATE TABLE IF NOT EXISTS users (
-                userID serial primary key,
-                username varchar(255),
-                password varchar(255),
-                displayName varchar(511),
-                fname varchar(255),
-                mname varchar(255),
-                lname varchar(255),
-                birthdate date,
-                address varchar(511),
-                email varchar(255),
-                clockStatus bool,
-                lastClockIn timestamp,
-                lastClockOut timestamp,
-                roles json,
-                permissions json
-            )`
+export const insertDevData = async () => {
+    // Drop all existing users
+    let query = {
+        name: 'Drop All Users',
+        text: 'DELETE FROM users',
     };
     await pgclient.query(query);
-    logger.info("Users Table Created");
-}
-export async function insertDevData() {
-    // // Drop all existing users
-    // let query: QueryConfig = {
-    //     name: 'Drop All Users',
-    //     text: 'DELETE FROM users',
-    // };
-    // await pgclient.query(query);
-    if (userDataPresent()) {
-        return;
-    }
     let user;
     let fname, lname, clockIn, clockOut, birthdate;
     // Generate and insert test users
@@ -70,32 +42,5 @@ export async function insertDevData() {
         await pgclient.query(query);
     }
     logger.info("Development Data Inserted into DB");
-}
-export async function validateDB() {
-    let valid = true;
-    const rows = schema.dbtables;
-    const query = {
-        name: 'Validate DB',
-        text: "SELECT table_name FROM information_schema.tables WHERE table_schema='public'"
-    };
-    let res = await pgclient.query(query);
-    for (let i = 0; i < res.rowCount; i++) {
-        if (res.rows[i].table_name != rows[i]) {
-            valid = false;
-        }
-    }
-    return valid;
-}
-async function userDataPresent() {
-    let valid = true;
-    const rows = schema.dbtables;
-    const query = {
-        name: 'Check for User Data',
-        text: "SELECT * FROM users"
-    };
-    let res = await pgclient.query(query);
-    if (res.rowCount < 5) {
-        valid = false;
-    }
-    return valid;
-}
+};
+// export default insertDevData;
