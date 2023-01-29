@@ -18,7 +18,7 @@ const typeDefs = `#graphql
 
     input UserIn {
         userID: Int
-        userPIN: Int!
+        userPIN: String!
         username: String!
         displayName: String!
         firstName: String!
@@ -49,14 +49,13 @@ const typeDefs = `#graphql
     }
 
     type Query {
-        user(userID: Int!): String
-        profile(userID: Int!): String
-        systemAuth(hostname: String!, userPIN: Int!): String
-        sysInfo: System
+        getUser(userToken: String!): User
+        PINAuth(hostname: String!, userPIN: Int!): String
+        getSysInfo: System
     }
 
     type Mutation {
-        updateUser(userID: Int!): String
+        updateUser(userToken: String!): User
         addUser(user: UserIn): String
     }
 `;

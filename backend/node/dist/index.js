@@ -1,3 +1,11 @@
+/*
+    TITLE: POS Application Backend Server
+    AUTHOR: Kevin Harvey
+    DATE: January 2023
+    DESCRIPTION: NodeJS/Express/Apollo Server exposes GrapQL endpoints and handles all functions related to the POS system. Database interaction
+    and all system functions are handled by this server.
+*/
+// Server and Package Imports
 import { ApolloServer } from '@apollo/server';
 import { expressMiddleware } from '@apollo/server/express4';
 import { ApolloServerPluginDrainHttpServer } from '@apollo/server/plugin/drainHttpServer';
@@ -9,12 +17,18 @@ import bodyParser from 'body-parser';
 import winston from 'winston';
 import os from 'os';
 import pg from 'pg';
+// GQL Imports
 import typeDefs from './graphql/types.js';
 import resolvers from './graphql/resolvers.js';
-import { initDB, insertDevData, validateDB } from './db/init.js';
+// Handlers, Extra Functions, etc. Imports
+import { initDB, validateDB } from './db/init.js';
 // ------------ INITIATE LOGGING SERVICES --------------------
+let logLevel = 'error';
+if (process.env.NODE_ENV == "development") {
+    logLevel = 'debug';
+}
 export const logger = winston.createLogger({
-    level: 'debug',
+    level: logLevel,
     transports: [
         new winston.transports.Console(),
         new winston.transports.File({ filename: './dist/info.log' }),
@@ -24,11 +38,11 @@ logger.info(`Application started on ${os.hostname()} at ${Date.now()}`);
 // -------------- CONNECT TO DB -----------------------------
 // Create PostgreSQL Database Client
 export const pgclient = new pg.Client({
-    host: 'postgres',
-    port: 5432,
-    user: 'postgres',
-    password: 'postgres',
-    database: 'pos'
+    host: process.env.DB_HOST || 'postgres',
+    port: Number(process.env.DB_PORT) || 5432,
+    user: process.env.DB_USER || 'postgres',
+    password: process.env.DB_PASSWORD || 'postgres',
+    database: process.env.DB_DB || 'pos'
 });
 // Connect to the Database
 pgclient.connect((err) => {
@@ -40,7 +54,6 @@ pgclient.connect((err) => {
     }
 });
 await initDB();
-await insertDevData();
 let res = await validateDB();
 if (!res) {
     logger.warn("Database Check Failed");
@@ -63,6 +76,6 @@ await server.start();
 app.use('/graphql', cors(), bodyParser.json(), expressMiddleware(server, {
     context: async ({ req }) => ({ token: req.headers.token }),
 }));
-// Modified server startup
+// GraphQL Server Start
 await new Promise((resolve) => httpServer.listen({ port: 4000 }, resolve));
 logger.info(`🚀 Server ready at http://localhost:4000/graphql`);

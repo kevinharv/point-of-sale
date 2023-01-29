@@ -15,7 +15,8 @@ declare interface System {
 declare interface User {
     userID?: Number
     username: String
-    userPIN?: Number
+    password?: String
+    userPIN?: String
     displayName: String
     firstName: String
     middleName?: String

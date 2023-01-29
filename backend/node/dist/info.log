@@ -373,3 +373,197 @@
 {"level":"info","message":"Database Connection Established!"}
 {"level":"info","message":"Users Table Created"}
 {"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930110041"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"dns_servers":"[\"127.0.0.11\"]","postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":"{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1/8\"}],\"eth0\":[{\"address\":\"172.18.0.3\",\"netmask\":\"255.255.0.0\",\"family\":\"IPv4\",\"mac\":\"02:42:ac:12:00:03\",\"internal\":false,\"cidr\":\"172.18.0.3/16\"}]}","server_arch":"x64","server_availableMem":2687.82421875,"server_cpu":"[{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":9440,\"nice\":0,\"sys\":8990,\"idle\":200740,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8850,\"nice\":0,\"sys\":7160,\"idle\":204080,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8260,\"nice\":0,\"sys\":7440,\"idle\":207680,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8450,\"nice\":0,\"sys\":8770,\"idle\":199990,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8930,\"nice\":0,\"sys\":7340,\"idle\":210710,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8560,\"nice\":0,\"sys\":7690,\"idle\":209150,\"irq\":0}}]","server_hostname":"8bf1729e54df","server_memory":3811.87890625,"server_os":"linux","server_os_release":"5.15.49-linuxkit","server_uptime":235.05}}
+{"level":"debug","message":{"dns_servers":"[\"127.0.0.11\"]","postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":"{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1/8\"}],\"eth0\":[{\"address\":\"172.18.0.3\",\"netmask\":\"255.255.0.0\",\"family\":\"IPv4\",\"mac\":\"02:42:ac:12:00:03\",\"internal\":false,\"cidr\":\"172.18.0.3/16\"}]}","server_arch":"x64","server_availableMem":2685.3828125,"server_cpu":"[{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":9490,\"nice\":0,\"sys\":9020,\"idle\":216320,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8900,\"nice\":0,\"sys\":7180,\"idle\":219630,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8370,\"nice\":0,\"sys\":7470,\"idle\":223260,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8470,\"nice\":0,\"sys\":8790,\"idle\":215680,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8960,\"nice\":0,\"sys\":7360,\"idle\":226410,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":8590,\"nice\":0,\"sys\":7710,\"idle\":224830,\"irq\":0}}]","server_hostname":"8bf1729e54df","server_memory":3811.87890625,"server_os":"linux","server_os_release":"5.15.49-linuxkit","server_uptime":250.83}}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930401316"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"development"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930422478"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"development"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930461973"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"development"}
+{"level":"info","message":"Dev Data"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930526226"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"User Data Present, skipping insert"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930682367"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"User Data Present, skipping insert"}
+{"level":"info","message":0}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930704432"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"User Data Present, skipping insert"}
+{"level":"info","message":false}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930757694"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674930772653"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Created"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8bf1729e54df at 1674931648756"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 0d81a5f48083 at 1674940910768"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 466d4ae92385 at 1674941072647"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 6dde37c9bf5f at 1674941115807"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8293d7ab715d at 1674941218606"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 8293d7ab715d at 1674941592444"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on c7984645c238 at 1674943010552"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on c7984645c238 at 1674943469489"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on a8f00c374424 at 1674943507495"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on a8f00c374424 at 1674944750810"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on a8f00c374424 at 1674944782986"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":[]}
+{"level":"info","message":"Application started on a8f00c374424 at 1674944829328"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":[]}
+{"level":"info","message":"Application started on a8f00c374424 at 1674944894115"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":"$2b$10$KcjC2w97ZGYJC5hIVLTveuAkGtJCObCTJU0s.eTmskn2tGqPJ5xZu"}
+{"level":"info","message":[]}
+{"level":"info","message":"Application started on a8f00c374424 at 1674945003164"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on b25f49bd6451 at 1674945039269"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":"$2b$10$wElowIpTRJ9R5QdvlDMaAuLl1L8zFwufISO58JLrKy2P51wv9lykO"}
+{"level":"info","message":[{"userid":1}]}
+{"level":"info","message":"Application started on b25f49bd6451 at 1674945188219"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on b25f49bd6451 at 1674945225457"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on b25f49bd6451 at 1674945260242"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":"$2b$10$6bpgU8CeaMLFuJuWr6Ys4uglBNBJYhhuNi1HWA0ZUNUMyYwsa1Qdm"}
+{"level":"info","message":[]}
+{"level":"info","message":"Application started on f8ca33cde0b9 at 1674954951141"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674954972019"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":[{"userid":1}]}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955098050"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":{"userid":1}}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955127673"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":1}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955146582"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955271952"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955374888"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674955427988"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957416148"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957495872"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957585840"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957655704"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957729265"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 438b2036dafb at 1674957819742"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}

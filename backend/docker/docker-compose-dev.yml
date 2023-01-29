@@ -5,8 +5,13 @@
 version: "3"
 services:
   node:
-    build: ../node
-    container_name: node-server
+    build: 
+      context: ../node
+      dockerfile: Dockerfile
+      args:
+        - NODE_VERSION=18.12.0
+    image: kevharv/pos-node
+    container_name: node
     restart: unless-stopped
     ports:
       - 4000:4000
@@ -14,7 +19,10 @@ services:
       - ../node:/app
       - /app/node_modules
     environment:
-      - NODE_ENV=development
+      NODE_ENV: development
+      DB_DB: pos
+      DB_USER: postgres
+      DB_PASSWORD: postgres
     depends_on:
       - postgres
     command: yarn dev

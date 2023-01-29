@@ -1,37 +1,35 @@
 /*
     TITLE: POS Backend Server GraphQL Resolvers
     AUTHOR: Kevin Harvey
-    DATE: 20220118
+    DATE: 20230118
     OVERVIEW: The GraphQL Resolvers are responsible for finding and returning the appropriate information for each query, mutation, or subscription.
     Most actions in this file are calls to other functions or APIs responsible for fulfilling the actual request. This is remove excess code from
     this file and ensure separation of concerns.
 */
 
 import { logger, pgclient } from '../index.js';
+import { getPasswordHash, handlePINAuth } from '../handlers/authentication.js';
 import dns from 'dns';
 import os from 'os';
+import { getUser } from '../handlers/userManagement.js';
 
 /* --------------- RESOLVERS DEFINITIONS ------------------- */
 const resolvers = {
     Query: {
-        systemAuth(source, args: any) {
-            return handlePINAuth(args.userPIN);
+        PINAuth(source, args: any) {
+            return handlePINAuth(String(args.userPIN));
         },
 
-        user: (source, args) => {
-            console.log(args)
-            return String(args.userID);
+        getUser: (source, args) => {
+            return getUser(args.userToken);
         },
-        profile: (args: any) => {
-            return String(args.userID);
-        },
-        sysInfo() {
+        getSysInfo() {
             return getSysInfo();
         }
     },
 
     Mutation: {
-        updateUser: (args: any) => {
+        updateUser: (source, args: any) => {
             return String(args.userID);
         },
         addUser: (source, args) => {
@@ -48,7 +46,7 @@ export default resolvers
 async function addUser(args): Promise<String> {
     const query = {
         name: 'Insert New User',
-        text: 'INSERT INTO users(username, password, displayname, fname, mname, lname, email) VALUES($1, $2, $3, $4, $5, $6, $7)',
+        text: 'INSERT INTO users(username, pospin, displayname, fname, mname, lname, email) VALUES($1, $2, $3, $4, $5, $6, $7)',
         values: [args.username, args.userPIN, args.displayName, args.firstName, args.middleName, args.lastName, args.email]
     }
 
@@ -56,15 +54,6 @@ async function addUser(args): Promise<String> {
     return JSON.stringify(res.rows);
 }
 
-async function handlePINAuth(PIN: number) {
-    const query = {
-        name: 'Validate Passowrd',
-        text: 'SELECT username FROM users WHERE password=$1',
-        values: [PIN]
-    }
-    let res = await pgclient.query(query);
-    return res.rows[0].username;
-}
 
 async function getSysInfo() {
 
