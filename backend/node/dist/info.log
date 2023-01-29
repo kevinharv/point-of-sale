@@ -567,3 +567,95 @@
 {"level":"info","message":"Database Connection Established!"}
 {"level":"info","message":"Users Table Present"}
 {"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on 36fa2522494e at 1675025437313"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":"\"hello\""}
+{"level":"debug","message":"fjkdl;ajfkds;jafkldjal;"}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675026684215"}
+{"level":"info","message":"Database Connection Established!"}
+{"code":"42601","file":"scan.l","length":101,"level":"error","line":"1145","name":"error","position":"245","routine":"scanner_yyerror","severity":"ERROR"}
+{"code":"42P01","file":"parse_relation.c","length":104,"level":"error","line":"1191","name":"error","position":"15","routine":"parserOpenTable","severity":"ERROR"}
+{"code":"42P01","file":"parse_relation.c","length":104,"level":"error","line":"1191","name":"error","position":"13","routine":"parserOpenTable","severity":"ERROR"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675026747490"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"error"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug"}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675026836309"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"error"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"address":"08419 Sanford Curve","birthdate":"1977-03-14T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Elisabeth.Fadel@hotmail.com","firstName":"Kevin","lastClockIn":"2020-01-01T03:28:40.000Z","lastClockOut":"2020-01-01T23:26:47.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}
+{"level":"error","message":"Duplicate PIN: 1234"}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675026878236"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"error"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":{"address":"08419 Sanford Curve","birthdate":"1977-03-14T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Elisabeth.Fadel@hotmail.com","firstName":"Kevin","lastClockIn":"2020-01-01T03:28:40.000Z","lastClockOut":"2020-01-01T23:26:47.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"error","message":"Duplicate PIN: 1234"}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675026960008"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"error"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":{"address":"931 West Union","birthdate":"1997-08-06T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Isidro81@yahoo.com","firstName":"Kevin","lastClockIn":"2020-01-01T02:32:23.000Z","lastClockOut":"2020-01-01T14:12:49.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675027062614"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":{"address":"931 West Union","birthdate":"1997-08-06T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Isidro81@yahoo.com","firstName":"Kevin","lastClockIn":"2020-01-01T02:32:23.000Z","lastClockOut":"2020-01-01T14:12:49.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"debug","message":{"user":null}}
+{"level":"debug","message":{"user":null}}
+{"level":"info","message":"Application started on fc27abc046a0 at 1675028437700"}
+{"level":"info","message":"Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"🚀 Server ready at http://localhost:4000/graphql"}
+{"level":"error","message":"[INIT] Database Connection Error: "}
+{"level":"error"}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675029733140"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"Development Data Inserted into DB"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":null}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675029988514"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":null}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030044459"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":null}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030128071"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":null}}
+{"level":"debug","message":{"user":null}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030424331"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":{"address":"77250 Christiansen Wells","birthdate":"1948-01-22T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Merritt.Schimmel47@yahoo.com","firstName":"Kevin","lastClockIn":"2020-01-01T00:55:13.000Z","lastClockOut":"2020-01-01T18:00:55.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030521610"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030530669"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":{"address":"77250 Christiansen Wells","birthdate":"1948-01-22T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Merritt.Schimmel47@yahoo.com","firstName":"Kevin","lastClockIn":"2020-01-01T00:55:13.000Z","lastClockOut":"2020-01-01T18:00:55.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"debug","message":{"user":{"address":"77250 Christiansen Wells","birthdate":"1948-01-22T00:00:00.000Z","clockStatus":false,"displayName":"Kevin Harvey","email":"Merritt.Schimmel47@yahoo.com","firstName":"Kevin","lastClockIn":"2020-01-01T00:55:13.000Z","lastClockOut":"2020-01-01T18:00:55.000Z","lastName":"Harvey","middleName":"Mitchell","permissions":["{\"permissions\":[\"timeclock\",\"foodSales\",\"drinkSales\"]}"],"roles":["{\"roles\":[\"waitstaff\"]}"],"userID":1,"username":"kevharv"}}}
+{"level":"debug","message":{"user":null}}
+{"level":"debug","message":{"user":null}}
+{"level":"debug","message":{"user":null}}

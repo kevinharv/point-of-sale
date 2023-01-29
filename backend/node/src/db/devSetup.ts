@@ -97,7 +97,7 @@ async function userDataPresent() {
 
     try {
         let res = await pgclient.query(query);
-        if (res.rowCount < 5) {
+        if (res.rowCount == 0) {
             valid = false;
         }
     }

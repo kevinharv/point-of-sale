@@ -16,7 +16,8 @@ import { getUser } from '../handlers/userManagement.js';
 /* --------------- RESOLVERS DEFINITIONS ------------------- */
 const resolvers = {
     Query: {
-        PINAuth(source, args: any) {
+        PINAuth(source, args: any, context) {
+            logger.debug(context);
             return handlePINAuth(String(args.userPIN));
         },
 
