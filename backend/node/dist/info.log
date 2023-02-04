@@ -659,3 +659,13 @@
 {"level":"debug","message":{"user":null}}
 {"level":"debug","message":{"user":null}}
 {"level":"debug","message":{"user":null}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675030751813"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
+{"level":"debug","message":{"user":null}}
+{"level":"debug","message":{"dns_servers":"[\"127.0.0.11\"]","postgres_version":"[{\"version\":\"PostgreSQL 12.3 on x86_64-pc-linux-musl, compiled by gcc (Alpine 9.3.0) 9.3.0, 64-bit\"}]","server_NICs":"{\"lo\":[{\"address\":\"127.0.0.1\",\"netmask\":\"255.0.0.0\",\"family\":\"IPv4\",\"mac\":\"00:00:00:00:00:00\",\"internal\":true,\"cidr\":\"127.0.0.1/8\"}],\"eth0\":[{\"address\":\"172.20.0.3\",\"netmask\":\"255.255.0.0\",\"family\":\"IPv4\",\"mac\":\"02:42:ac:14:00:03\",\"internal\":false,\"cidr\":\"172.20.0.3/16\"}]}","server_arch":"x64","server_availableMem":2679.82421875,"server_cpu":"[{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":47220,\"nice\":0,\"sys\":23880,\"idle\":6813170,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":44140,\"nice\":0,\"sys\":26610,\"idle\":6812320,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":41260,\"nice\":0,\"sys\":24500,\"idle\":6806440,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":51310,\"nice\":0,\"sys\":24270,\"idle\":6801310,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":42760,\"nice\":0,\"sys\":26970,\"idle\":6808350,\"irq\":0}},{\"model\":\"AMD Ryzen 5 2600 Six-Core Processor\",\"speed\":3399,\"times\":{\"user\":43960,\"nice\":0,\"sys\":23890,\"idle\":6815100,\"irq\":0}}]","server_hostname":"9e8249fbbbf7","server_memory":3811.88671875,"server_os":"linux","server_os_release":"5.15.49-linuxkit","server_uptime":6911.67}}
+{"level":"info","message":"[INIT] Application started on 9e8249fbbbf7 at 1675033778670"}
+{"level":"info","message":"[INIT] Database Connection Established!"}
+{"level":"info","message":"Users Table Present"}
+{"level":"info","message":"[INIT] Server ready at http://localhost:4000/graphql"}
