@@ -1,7 +1,10 @@
 # Point of Sale Application
 
 ## Components
-- Tauri Embedded Client
+- Sales Client
+	- Tauri + Linux Embedded
+	- iOS?
+- Kitchen Display System (KDS) Client
 - Web Client
 - Backend Server
 
@@ -14,7 +17,7 @@ Additionally, the embedded client will be responsible for operational management
 The web client serves as the management and configuration client for the rest of the POS system. The web client will manage settings applicable to the server, clients, and the business. Changes in employment, position, access, menu, etc. will all be perfomed here. It is designed for access via a desktop computer from an office or similar private space. The web client is intended for management use only.
 
 ### Backend Server
-The server, which may be located on-premises or in the cloud, serves as the single source of truth for all aspects of the POS system. All orders, payment processing, employee actions will be routed through the server. 
+The server, which may be located on-premises or in the cloud, serves as the single source of truth for all aspects of the POS system. All orders, payment processing, employee actions will be routed through the server. It will interface with an off-the-shelf database deployed by the customer. Documentation will include installing a compatible DB.
 
 ## Security
 ### Architectural Decisions
@@ -22,11 +25,10 @@ Because embedded systems are often difficult to secure, all connections to the i
 
 
 ## Technology Stack
-- React JS
+- Next.js
 - Tauri
-- Express JS
-- Node JS
-- PostgreSQL? (DB decision pending)
+- Fastify
+- PostgreSQL + Prism
 - Docker
 
 ## Management Functionality
