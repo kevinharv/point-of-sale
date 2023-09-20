@@ -9,3 +9,24 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model Region {
+  id      Int     @id @default(autoincrement())
+  name    String  @unique
+  groups  Group[]
+}
+
+model Group {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  regionID  Int
+  region    Region  @relation(fields: [regionID], references: [id])
+  sites     Site[]
+}
+
+model Site {
+  id        Int     @id @default(autoincrement())
+  name      String  @unique
+  groupID   Int
+  group     Group   @relation(fields: [groupID], references: [id])
+}
