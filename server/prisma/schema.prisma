@@ -11,22 +11,44 @@ datasource db {
 }
 
 model Region {
-  id      Int     @id @default(autoincrement())
-  name    String  @unique
-  groups  Group[]
+  id     Int         @id @default(autoincrement())
+  name   String      @unique
+  groups SiteGroup[]
 }
 
-model Group {
-  id        Int     @id @default(autoincrement())
-  name      String  @unique
-  regionID  Int
-  region    Region  @relation(fields: [regionID], references: [id])
-  sites     Site[]
+model SiteGroup {
+  id       Int         @id @default(autoincrement())
+  name     String      @unique
+  regionID Int
+  region   Region      @relation(fields: [regionID], references: [id])
+  sites    Site[]
+  parentID Int?
+  parent   SiteGroup?  @relation("SiteGroupTree", fields: [parentID], references: [id])
+  children SiteGroup[] @relation("SiteGroupTree")
 }
 
 model Site {
-  id        Int     @id @default(autoincrement())
-  name      String  @unique
-  groupID   Int
-  group     Group   @relation(fields: [groupID], references: [id])
+  id          Int          @id @default(autoincrement())
+  name        String       @unique
+  siteGroupID Int
+  siteGroup   SiteGroup    @relation(fields: [siteGroupID], references: [id])
+  tableGroups TableGroup[]
+}
+
+model TableGroup {
+  id       Int          @id @default(autoincrement())
+  name     String       @unique
+  siteID   Int
+  site     Site         @relation(fields: [siteID], references: [id])
+  parentID Int?
+  parent   TableGroup?  @relation("TableGroup", fields: [parentID], references: [id])
+  children TableGroup[] @relation("TableGroup")
+  tables   Table[]
+}
+
+model Table {
+  id      Int        @id @default(autoincrement())
+  name    String     @unique
+  groupID Int
+  group   TableGroup @relation(fields: [groupID], references: [id])
 }
