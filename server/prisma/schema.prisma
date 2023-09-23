@@ -1,6 +1,4 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
+// Database Connector Configuration
 generator client {
   provider = "prisma-client-js"
 }
@@ -9,6 +7,13 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+
+// LOCATION SCHEMA
+// Hierarchy of Region -> Site Group(s) -> Site
+// Sites will have many attributes, groups allow targeting
+// changes based on arbitrary groupings. Each site will
+// have table groups and tables. 
 
 model Region {
   id     Int         @id @default(autoincrement())
@@ -23,8 +28,8 @@ model SiteGroup {
   region   Region      @relation(fields: [regionID], references: [id])
   sites    Site[]
   parentID Int?
-  parent   SiteGroup?  @relation("SiteGroupTree", fields: [parentID], references: [id])
-  children SiteGroup[] @relation("SiteGroupTree")
+  parent   SiteGroup?  @relation("SiteGroup_Nest", fields: [parentID], references: [id])
+  children SiteGroup[] @relation("SiteGroup_Nest")
 }
 
 model Site {
@@ -41,8 +46,8 @@ model TableGroup {
   siteID   Int
   site     Site         @relation(fields: [siteID], references: [id])
   parentID Int?
-  parent   TableGroup?  @relation("TableGroup", fields: [parentID], references: [id])
-  children TableGroup[] @relation("TableGroup")
+  parent   TableGroup?  @relation("TableGroup_Nest", fields: [parentID], references: [id])
+  children TableGroup[] @relation("TableGroup_Nest")
   tables   Table[]
 }
 
@@ -52,3 +57,21 @@ model Table {
   groupID Int
   group   TableGroup @relation(fields: [groupID], references: [id])
 }
+
+// TECHNOLOGY SCHEMA
+// Includes configuration information for servers,
+// workstations, printers, etc. All items belong to
+// a site, and optionally a table group.
+
+
+// USER SCHEMA
+// All information stored about users of the system.
+// Attributes may be managed by managers, or pull from
+// a directory service such as AAD or Google Workspace.
+
+
+// TICKET SCHEMA
+// A ticket includes order information, table (or bar),
+// payment information, and optionally contact info
+// for the owner of the tab. This is the base unit
+// for order management.
