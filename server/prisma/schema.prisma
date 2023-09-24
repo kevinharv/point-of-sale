@@ -8,7 +8,6 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-
 // LOCATION SCHEMA
 // Hierarchy of Region -> Site Group(s) -> Site
 // Sites will have many attributes, groups allow targeting
@@ -16,14 +15,16 @@ datasource db {
 // have table groups and tables. 
 
 model Region {
-  id     Int         @id @default(autoincrement())
-  name   String      @unique
-  groups SiteGroup[]
+  id      Int         @id @default(autoincrement())
+  name    String      @unique
+  created DateTime
+  groups  SiteGroup[]
 }
 
 model SiteGroup {
   id       Int         @id @default(autoincrement())
   name     String      @unique
+  created  DateTime
   regionID Int
   region   Region      @relation(fields: [regionID], references: [id])
   sites    Site[]
@@ -33,16 +34,25 @@ model SiteGroup {
 }
 
 model Site {
-  id          Int          @id @default(autoincrement())
-  name        String       @unique
-  siteGroupID Int
-  siteGroup   SiteGroup    @relation(fields: [siteGroupID], references: [id])
-  tableGroups TableGroup[]
+  id               Int                @id @default(autoincrement())
+  name             String             @unique
+  created          DateTime
+  address          String
+  siteGroupID      Int
+  siteGroup        SiteGroup          @relation(fields: [siteGroupID], references: [id])
+  tableGroups      TableGroup[]
+  Server           Server[]
+  Workstation      Workstation[]
+  Printer          Printer[]
+  KDS              KDS[]
+  PaymentProcessor PaymentProcessor[]
+  Ticket           Ticket[]
 }
 
 model TableGroup {
   id       Int          @id @default(autoincrement())
   name     String       @unique
+  created  DateTime
   siteID   Int
   site     Site         @relation(fields: [siteID], references: [id])
   parentID Int?
@@ -54,8 +64,10 @@ model TableGroup {
 model Table {
   id      Int        @id @default(autoincrement())
   name    String     @unique
+  created DateTime
   groupID Int
   group   TableGroup @relation(fields: [groupID], references: [id])
+  Ticket  Ticket[]
 }
 
 // TECHNOLOGY SCHEMA
@@ -63,15 +75,129 @@ model Table {
 // workstations, printers, etc. All items belong to
 // a site, and optionally a table group.
 
+model Server {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  created DateTime
+  ipaddr  String   @db.Inet
+  role    String
+  siteID  Int
+  site    Site     @relation(fields: [siteID], references: [id])
+}
+
+model Workstation {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  created DateTime
+  ipaddr  String   @db.Inet
+  role    String
+  siteID  Int
+  site    Site     @relation(fields: [siteID], references: [id])
+}
+
+model Printer {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  created DateTime
+  ipaddr  String   @db.Inet
+  role    String
+  siteID  Int
+  site    Site     @relation(fields: [siteID], references: [id])
+}
+
+model KDS {
+  id      Int      @id @default(autoincrement())
+  name    String   @unique
+  created DateTime
+  ipaddr  String   @db.Inet
+  role    String
+  siteID  Int
+  site    Site     @relation(fields: [siteID], references: [id])
+}
 
 // USER SCHEMA
 // All information stored about users of the system.
 // Attributes may be managed by managers, or pull from
 // a directory service such as AAD or Google Workspace.
 
-
 // TICKET SCHEMA
 // A ticket includes order information, table (or bar),
 // payment information, and optionally contact info
 // for the owner of the tab. This is the base unit
 // for order management.
+enum PAYMENTPROCESSOR {
+  VISA
+  MASTERCARD
+  DISCOVER
+  AMERICAN_EXPRESS
+  PAYPAL
+  APPLE_PAY
+  GOOGLE_PAY
+  CASH
+}
+
+enum ITEMTYPE {
+  FOOD
+  DRINK
+  ALCOHOL
+  CONDIMENT
+  SERVICE
+}
+
+model PaymentProcessor {
+  id               Int              @id @default(autoincrement())
+  name             String           @unique
+  paymentProcessor PAYMENTPROCESSOR
+  created          DateTime
+  siteID           Int
+  site             Site             @relation(fields: [siteID], references: [id])
+}
+
+model PayCard {
+  id               Int              @id @default(autoincrement())
+  paymentProcessor PAYMENTPROCESSOR
+  created          DateTime
+  nameOnCard       String
+  cardNumber       BigInt
+  expDate          String // maybe make date?
+  cvv              Int
+  Ticket           Ticket[]
+}
+
+model Transaction {
+  id Int @id @default(autoincrement())
+  // TODO - define the rest
+}
+
+model Ticket {
+  id      Int      @id @default(autoincrement())
+  created DateTime
+  type    String
+  menuItems MenuItem[]
+  cardID  Int?
+  card    PayCard? @relation(fields: [cardID], references: [id])
+  siteID  Int
+  site    Site     @relation(fields: [siteID], references: [id])
+  tableID Int?
+  table   Table?   @relation(fields: [tableID], references: [id])
+}
+
+model Ingredient {
+  id             Int          @id @default(autoincrement())
+  name           String       @unique
+  created        DateTime
+  substitutionID Int?
+  substitution   Ingredient?  @relation("Ingredient_Sub", fields: [substitutionID], references: [id])
+  children       Ingredient[] @relation("Ingredient_Sub")
+  menuItems      MenuItem[]
+}
+
+model MenuItem {
+  id            Int          @id @default(autoincrement())
+  name          String
+  created       DateTime
+  itemType      ITEMTYPE
+  ingredientIDs Int[]
+  ingredients   Ingredient[]
+  tickets       Ticket[]
+}
