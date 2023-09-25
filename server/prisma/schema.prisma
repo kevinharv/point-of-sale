@@ -144,6 +144,11 @@ enum ITEMTYPE {
   SERVICE
 }
 
+enum TICKETTYPE {
+  TABLE
+  BAR
+}
+
 model PaymentProcessor {
   id               Int              @id @default(autoincrement())
   name             String           @unique
@@ -170,16 +175,16 @@ model Transaction {
 }
 
 model Ticket {
-  id      Int      @id @default(autoincrement())
-  created DateTime
-  type    String
+  id        Int        @id @default(autoincrement())
+  created   DateTime
+  type      TICKETTYPE
   menuItems MenuItem[]
-  cardID  Int?
-  card    PayCard? @relation(fields: [cardID], references: [id])
-  siteID  Int
-  site    Site     @relation(fields: [siteID], references: [id])
-  tableID Int?
-  table   Table?   @relation(fields: [tableID], references: [id])
+  cardID    Int?
+  card      PayCard?   @relation(fields: [cardID], references: [id])
+  siteID    Int
+  site      Site       @relation(fields: [siteID], references: [id])
+  tableID   Int?
+  table     Table?     @relation(fields: [tableID], references: [id])
 }
 
 model Ingredient {
