@@ -1,7 +1,10 @@
 FROM node:18
 
+ENV NODE_ENV = development
+
 WORKDIR /app
-COPY . .
 RUN npm install -g pnpm
+COPY package.json .
 RUN pnpm install
-CMD ["pnpm", "run", "dev"]
+COPY . .
+CMD ["pnpm", "run", "watch"]

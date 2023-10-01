@@ -1,32 +1,19 @@
-import Fastify from 'fastify';
+/*
+    Point of Sale Server
+    
+*/
 
-// Instantiate the Fastify server
-const fastify = Fastify({
-  logger: false
+import express from "express";
+// import { Prisma, PrismaClient } from "@prisma/client";
+
+const port = 3000;
+// const prisma = new PrismaClient();
+const app = express();
+
+app.get('/', async (req, res) => {
+    res.send("Checking if this works! But a I going to automaically reload?");
 });
 
-
-// Define routes
-fastify.get('/', async (request, reply) => {
-  return { hello: 'world' }
-});
-
-
-
-// Start the server
-const start = async () => {
-  try {
-    fastify.listen({ port: 3000, host: '::' }, function (err, address) {
-        if (err) {
-            fastify.log.error(err)
-            process.exit(1)
-        }
-        fastify.log.info(`Server listening on ${address}`)
-    })
-  } catch (err) {
-    fastify.log.error(err);
-    process.exit(1);
-  }
-}
-
-start();
+app.listen(port, () => {
+    console.log(`Server listening on port ${port}`);
+})
