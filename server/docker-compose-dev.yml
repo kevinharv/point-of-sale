@@ -1,0 +1,42 @@
+---
+services:
+  server:
+    build: .
+    # depends_on:
+    #   - postgres
+    volumes:
+      - ./src:/app/src
+    environment:
+      NODE_ENV: production
+      NODE_PORT: 3000
+    ports:
+      - 3000:3000
+    # command: ["node", "/app/dist/index.js"]
+    # healthcheck:
+    #   test: ["CMD", "curl", "-fk", "${SERVER_HOSTNAME}:${SERVER_PORT}/healthcheck"]
+    #   interval: 5s
+    #   timeout: 3s
+    #   retries: 3server:
+  
+#   postgres:
+#     container_name: "postgres"
+#     image: "postgres:16"
+#     volumes:
+#       - db-data:/var/lib/postgresql/data
+#     environment:
+#       POSTGRES_USER: ${POSTGRES_USER}
+#       POSTGRES_PASSWORD: ${POSTGRES_PW}
+#       POSTGRES_DB: ${POSTGRES_DB}
+#     ports:
+#       - "5432:5432"
+#     expose:
+#       - 5432
+#     restart: always
+#     healthcheck:
+#       test: [ "CMD", "pg_isready", "-U", "${POSTGRES_USER}", "-d", "${POSTGRES_DB}" ]
+#       interval: 10s
+#       timeout: 5s
+#       retries: 5
+
+# volumes:
+#   db-data:
