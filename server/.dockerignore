@@ -1,6 +1,5 @@
-.gitignore
-Dockerfile
+LICENSE
+README.md
 docker-compose.yml
-.env.example
-node_modules
-dist
+.gitignore
+.env*
