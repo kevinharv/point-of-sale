@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"pos/src/database"
 )
 
@@ -11,6 +12,10 @@ func main() {
 	if err != nil {
 		panic(err)
 	}
+	defer database.Disconnect(db)
 
-	database.Disconnect(db)
+	database.Init(db)
+
+
+	
 }

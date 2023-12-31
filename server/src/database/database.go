@@ -8,7 +8,7 @@ import (
 )
 
 const (
-    host     = "database"
+    host     = "localhost"
     port     = 5432
     user     = "postgres"
     password = "postgres"
@@ -23,15 +23,42 @@ func Connect() (*sql.DB, error) {
 	if err != nil {
 		log.Fatalln("Failed to connect to POS DB")
 		return nil, err
+	} else {
+		log.Println("Connected to POS DB")
 	}
 
-	log.Println("Connected to POS DB")
 	return db, nil
 }
 
-func Init() {
-	// Create tables
+// Create tables
+func Init(db *sql.DB) {
+	_, err := db.Exec(`CREATE TABLE IF NOT EXISTS users(
+		id          BIGSERIAL PRIMARY KEY,
+		first_name  VARCHAR(255),
+		middle_name VARCHAR(255),
+		last_name   VARCHAR(255),
+		birthdate   TIMESTAMP
+	)`)
 
+	if err != nil {
+		log.Println("Failed to create users table in DB")
+		log.Printf("%s", err)
+	} else {
+		log.Println("Created users table in DB")
+	}
+
+	_, err = db.Exec(`CREATE TABLE IF NOT EXISTS permissions(
+		id            BIGSERIAL PRIMARY KEY,
+		userID        BIGSERIAL REFERENCES users(id),
+		administrator BOOLEAN
+	)`)
+
+	if err != nil {
+		log.Println("Failed to create permissions table in DB")
+		log.Printf("%s", err)
+	} else {
+		log.Println("Created permissions table in DB")
+	}
 }
 
 func Test() {
