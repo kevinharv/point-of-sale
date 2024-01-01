@@ -2,8 +2,11 @@ package main
 
 import (
 	"log"
+	"fmt"
 	"net/http"
 	"pos/src/database"
+	"github.com/a-h/templ"
+	"pos/src/components"
 )
 
 func main() {
@@ -17,5 +20,10 @@ func main() {
 	database.Init(db)
 
 
+	component := components.Hello("Frank")
 	
+	http.Handle("/", templ.Handler(component))
+
+	fmt.Println("Listening on :3000")
+	http.ListenAndServe(":3000", nil)
 }

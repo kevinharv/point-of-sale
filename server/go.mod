@@ -1,6 +1,6 @@
 module pos
 
-go 1.21.3
+go 1.21
 
 require (
 	github.com/a-h/templ v0.2.501 // indirect
