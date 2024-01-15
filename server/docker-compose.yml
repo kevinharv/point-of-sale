@@ -3,7 +3,7 @@ version: '3.8'
 services:
   application:
     build:
-      context: ./
+      context: .
       dockerfile: Dockerfile
       args:
         OS_VERSION: 12
@@ -24,7 +24,7 @@ services:
     ports:
       - 80:80
       - 443:443
-    restart: on-failiure
+    restart: no
     healthcheck:
       test: ["CMD", "curl", "-f", "http://localhost"]
       interval: 30s
