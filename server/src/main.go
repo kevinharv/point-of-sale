@@ -1,22 +1,35 @@
-package server
+package main
 
 import (
 	"log"
 	"fmt"
-	"net/http"
-	"pos/src/database"
+	// "net/http"
+	"gorm.io/gorm"
+	"gorm.io/driver/sqlite"
 )
+
+type Product struct {
+	gorm.Model
+	Name string
+	Price uint
+}
 
 func main() {
 	log.Printf("Starting POS Server")
-	db, err := database.Connect()
+
+	db, err := gorm.Open(sqlite.Open("test.db"), &gorm.Config{})
 	if err != nil {
-		panic(err)
+		panic("Failed to connect to DB")
 	}
-	defer database.Disconnect(db)
 
-	database.Init(db)
+	db.AutoMigrate(&Product{})
 
-	fmt.Println("Listening on http://localhost:3000")
-	http.ListenAndServe(":3000", nil)
+	// db.Create(&Product{Name: "Second Product", Price: 500})
+	var product Product
+	db.First(&product, 2)
+
+	fmt.Printf("First Product Name: %s\n", product.Name)
+
+	// fmt.Println("Listening on http://localhost:3000")
+	// http.ListenAndServe(":3000", nil)
 }
