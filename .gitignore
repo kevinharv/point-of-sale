@@ -1,1 +1,10 @@
 **__pycache__
+.terraform
+*.tfstate
+*.tfstate.*
+secrets.auto.tfvars
+*.tfplan
+.terraform.lock.hcl
+build/
+layers/
+*.zip
