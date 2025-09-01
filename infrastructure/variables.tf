@@ -4,8 +4,8 @@
 
 variable "environment" {
   description = "Deployment Environment Shortname - DEV, QA, PROD"
-  type = string
-  default = "DEV"
+  type        = string
+  default     = "DEV"
 }
 
 variable "aws_region" {
@@ -16,15 +16,15 @@ variable "aws_region" {
 
 variable "aws_access_key" {
   description = "AWS IAM Access Key"
-  type = string
+  type        = string
 }
 
 variable "aws_secret_key" {
   description = "AWS IAM Secret Key"
-  type = string
+  type        = string
 }
 
 variable "hosted_zone_id" {
   description = "Top-level Route53 Hosted Zone ID."
-  type = string
+  type        = string
 }

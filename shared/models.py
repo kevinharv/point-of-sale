@@ -9,6 +9,39 @@ from pydantic import BaseModel
 
 # === PHYSICAL DOMAIN ===
 
+pk_classes = [
+    # "ACCOUNT",    # Not needed if table-per-tenant
+    "REGION",
+    "SITE_GROUP",
+    "SITE",
+    "TABLE_GROUP",
+    "TABLE",
+    "KDS",
+    "WORKSTATION",
+    "PRINTER",
+    "PAYMENT_METHOD",
+    "TICKET",
+    
+]
+
+table_classes = [
+    {
+    "pk": "ACCOUNT:<id>",
+    "sk": "METADATA",
+    "data": {
+        "name": "Example Dining Facility",
+        "address": "Home Office"
+        }
+    },
+    {
+    "pk": "REGION:<id>",
+    "sk": "ACCOUNT:<id>",
+    "data": {
+        "foo": 1
+        }
+    },
+]
+
 class Region(BaseModel):
     id: int
     name: str
@@ -36,6 +69,9 @@ class Table(BaseModel):
 
 
 # === INFRASTRUCTURE SECTION ===
+
+# Consolidate into hardware:type (ex: hardware:kds)
+# KDS, Workstation, Printer
 
 class KDS(BaseModel):
     id: int
@@ -72,6 +108,8 @@ class Printer(BaseModel):
 # === BUSINESS SECTION ===
 
 # Ex: cash, card, Apple Pay? Google Pay? Others?
+# Convert this into a transaction...?
+# Can hold metadata:paymentMethods key with info
 class PaymentMethod(BaseModel):
     id: int
     name: str
@@ -80,9 +118,44 @@ class PaymentMethod(BaseModel):
 
 # === TICKET SECTION ===
 
+
+# ticket (record of transaction), kds_ticket (derived from order submission event)
+
+
 class Ticket(BaseModel):
     id: int
     site_id: int
     ticket_type: str
+
+class KDSTicket(BaseModel):
+    id: int
+    kds_id: int
+    ticket_id: int
+    status: str   # new, in-progress, completed
+    priority: int
+
+# Created per order submission, can have multiple for each ticket.
+# MAYBE - appetizers and/or drinks get dispatched separately and before main course.
+kds_ticket_example = {
+    "id": 5,
+    "createdAt": 9000013483,        # UNIX epoch timestamp? ISO 8601 string?
+    "related": {
+        "ticketID": 1234,
+        "ticketType": "table",
+        "tableID": 432,
+        "createdBy": "Jonathan",
+    },
+    "menuItems": [
+        {
+            "id": 15,
+            "displayName": "SM Fry",
+            "type": "side",
+            "notes": [
+                "EXTRA SALT",
+                "SIDE RANCH"
+            ]
+        }
+    ]
+}
 
 # Ticket Types: table, bar, takeout, delivery, event

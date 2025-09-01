@@ -15,6 +15,12 @@ variable "environment" {
   type = string
 }
 
+variable "layer_arns" {
+  description = "Lambda layer ARN list."
+  type = list(string)
+  default = []
+}
+
 variable "apigw_execution_arn" {
   description = "API Gateway Execution ARN"
   type = string
