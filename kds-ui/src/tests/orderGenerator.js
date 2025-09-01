@@ -1,4 +1,4 @@
-import { faker, fakerSR_RS_latin } from "@faker-js/faker";
+import { faker } from "@faker-js/faker";
 
 export function generateOrder(id) {
     let items = [];
@@ -17,6 +17,7 @@ export function generateOrder(id) {
     }
     
     return {
+        id: id,
         ticketNumber: Math.floor(Math.random() * 10000),
         submittedBy: faker.person.firstName(),
         submissionTime: Date.now(),

@@ -13,6 +13,7 @@ export default function OrderCard(props) {
   const [submittedBy] = useState(testOrder.submittedBy);
   const [submissionTime] = useState(testOrder.submissionTime);
   const [orderItems] = useState(testOrder.orderItems);
+  const [infoStripBG, setInfoStripBG] = useState("bg-gray-700");
 
   const [elapsedTime, setElapsedTime] = useState(() => {
     return Math.floor((Date.now() - submissionTime) / 1000);
@@ -27,8 +28,15 @@ export default function OrderCard(props) {
     return () => clearInterval(interval);
   }, [submissionTime]);
 
+  useEffect(() => {
+    if (elapsedTime > orderConfig.badTime) {
+      setInfoStripBG("bg-red-700");
+    } else if (elapsedTime > orderConfig.warnTime) {
+      setInfoStripBG("bg-yellow-700");
+    }
+  }, [elapsedTime]);
+
   const formatTime = (seconds) => {
-    const hrs = Math.floor(seconds / 3600);
     const mins = Math.floor((seconds % 3600) / 60);
     const secs = seconds % 60;
     return `${mins.toString().padStart(2, "0")}:${secs
@@ -40,7 +48,7 @@ export default function OrderCard(props) {
     <div className="flex flex-col border-1 rounded-sm border-white min-h-3/4 bg-gray-800 w-full">
       <ol className="p-3 flex-1">
         {orderItems.map((orderItem) => (
-          <li key={orderItem.name}>
+          <li key={`${orderItem.id}:${orderItem.name}`}>
             {orderItem.name}
             <ul className="ml-4">
               {orderItem.sub.map((sub) => (
@@ -51,15 +59,12 @@ export default function OrderCard(props) {
         ))}
       </ol>
 
-      <div className="w-full mt-2 shrink-0 bg-gray-700 text-center flex justify-between px-2 py-1">
+      <div
+        className={`w-full mt-2 shrink-0 ${infoStripBG} text-center flex justify-between px-2 py-1`}
+      >
         <p>{ticketNumber}</p>
         <p>{submittedBy}</p>
-        <p
-          className={
-            (elapsedTime > orderConfig.badTime && "bg-red-700") ||
-            (elapsedTime > orderConfig.warnTime && "bg-yellow-700")
-          }
-        >
+        <p>
           {formatTime(elapsedTime)}
         </p>
       </div>

@@ -10,7 +10,7 @@ export default function App() {
   const [orderIDs, setOrderIDs] = useState([]);
 
   useEffect(() => {
-    const numOrders = Math.floor(Math.random() * 15);
+    const numOrders = Math.floor(Math.random() * 10);
     const newOrderIDs = [];
     for (let i = 0; i < numOrders; i++) {
       newOrderIDs.push(Math.random() * 10000);
@@ -24,7 +24,7 @@ export default function App() {
 
   return (
     <div className="flex flex-col h-screen">
-      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4 flex-1 overflow-y-auto">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4 flex-1 overflow-y-auto overflow-x-hidden">
         {orderIDs.map((order) => (
           <li
             className="list-none mb-4 break-inside-avoid w-full"
@@ -36,8 +36,9 @@ export default function App() {
         ))}
       </div>
 
-      <div className="w-full bg-slate-700 p-2 shrink-0">
-        <h1 className="text-white">Me</h1>
+      <div className="w-full bg-slate-700 p-2 shrink-0 flex justify-between">
+        <h1 className="text-white px-4">Me</h1>
+        <h1 className="text-white px-4">{Date.now()}</h1>
       </div>
     </div>
   );
