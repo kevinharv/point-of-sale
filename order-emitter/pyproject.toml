@@ -1,0 +1,10 @@
+[project]
+name = "order-emitter"
+version = "0.1.0"
+description = "Food and beverage point of sale system order event emitter."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = [
+    "faker>=40.11.0",
+    "ruff>=0.15.7",
+]
