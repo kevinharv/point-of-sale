@@ -1,12 +1,5 @@
 from pydantic import BaseModel
 
-class Ticket(BaseModel):
-    id: int
-    name: str
-
-    def to_json(self) -> str:
-        return self.model_dump_json()
-
 # === PHYSICAL DOMAIN ===
 
 class Region(BaseModel):

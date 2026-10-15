@@ -6,7 +6,7 @@ from faker import Faker
 
 fake = Faker()
 
-def generate_example():
+def generate_example() -> dict[str, object]:
     return {
         "id": random.randint(100_000, 999_999),
         "metadata": {
