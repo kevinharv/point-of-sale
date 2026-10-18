@@ -1,3 +1,0 @@
-/*
-    Outputs from POS app resource provisioning.
-*/
