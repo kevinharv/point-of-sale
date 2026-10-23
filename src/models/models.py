@@ -1,18 +1,8 @@
 from pydantic import BaseModel
 
-<<<<<<< HEAD:src/models/models.py
-=======
-# class Ticket(BaseModel):
-#     id: int
-#     name: str
-
-#     def to_json(self) -> str:
-#         return self.model_dump_json()
-
->>>>>>> master:shared/models.py
 # === PHYSICAL DOMAIN ===
 
-pk_classes = [
+pk_classes: list[str] = [
     # "ACCOUNT",    # Not needed if table-per-tenant
     "REGION",
     "SITE_GROUP",
@@ -24,35 +14,28 @@ pk_classes = [
     "PRINTER",
     "PAYMENT_METHOD",
     "TICKET",
-    
 ]
 
-table_classes = [
+table_classes: list[object] = [
     {
-    "pk": "ACCOUNT:<id>",
-    "sk": "METADATA",
-    "data": {
-        "name": "Example Dining Facility",
-        "address": "Home Office"
-        }
+        "pk": "ACCOUNT:<id>",
+        "sk": "METADATA",
+        "data": {"name": "Example Dining Facility", "address": "Home Office"},
     },
-    {
-    "pk": "REGION:<id>",
-    "sk": "ACCOUNT:<id>",
-    "data": {
-        "foo": 1
-        }
-    },
+    {"pk": "REGION:<id>", "sk": "ACCOUNT:<id>", "data": {"foo": 1}},
 ]
+
 
 class Region(BaseModel):
     id: int
     name: str
 
+
 class SiteGroup(BaseModel):
     id: int
     name: str
     region_id: str
+
 
 class Site(BaseModel):
     id: int
@@ -60,10 +43,12 @@ class Site(BaseModel):
     address: str
     site_group_id: int
 
+
 class TableGroup(BaseModel):
     id: int
     name: str
     site_id: int
+
 
 class Table(BaseModel):
     id: int
@@ -76,14 +61,16 @@ class Table(BaseModel):
 # Consolidate into hardware:type (ex: hardware:kds)
 # KDS, Workstation, Printer
 
+
 class KDS(BaseModel):
     id: int
     name: str
     hostname: str
     fqdn: str
     ip_address: str
-    role: str   # copying this, not sure what for yet
+    role: str  # copying this, not sure what for yet
     site_id: int
+
 
 class Workstation(BaseModel):
     id: int
@@ -93,10 +80,12 @@ class Workstation(BaseModel):
     ip_address: str
     site_id: str
 
-class PrinterType():
+
+class PrinterType:
     name: str
     paper_size: str
     is_thermal: bool
+
 
 class Printer(BaseModel):
     id: int
@@ -109,6 +98,7 @@ class Printer(BaseModel):
 
 
 # === BUSINESS SECTION ===
+
 
 # Ex: cash, card, Apple Pay? Google Pay? Others?
 # Convert this into a transaction...?
@@ -130,18 +120,20 @@ class Ticket(BaseModel):
     site_id: int
     ticket_type: str
 
+
 class KDSTicket(BaseModel):
     id: int
     kds_id: int
     ticket_id: int
-    status: str   # new, in-progress, completed
+    status: str  # new, in-progress, completed
     priority: int
+
 
 # Created per order submission, can have multiple for each ticket.
 # MAYBE - appetizers and/or drinks get dispatched separately and before main course.
-kds_ticket_example = {
+kds_ticket_example: dict[str, str | int | object] = {
     "id": 5,
-    "createdAt": 9000013483,        # UNIX epoch timestamp? ISO 8601 string?
+    "createdAt": 9000013483,  # UNIX epoch timestamp? ISO 8601 string?
     "related": {
         "ticketID": 1234,
         "ticketType": "table",
@@ -153,12 +145,9 @@ kds_ticket_example = {
             "id": 15,
             "displayName": "SM Fry",
             "type": "side",
-            "notes": [
-                "EXTRA SALT",
-                "SIDE RANCH"
-            ]
+            "notes": ["EXTRA SALT", "SIDE RANCH"],
         }
-    ]
+    ],
 }
 
 # Ticket Types: table, bar, takeout, delivery, event
